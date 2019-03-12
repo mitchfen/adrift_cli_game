@@ -15,7 +15,6 @@
  * 
  * 
  * TODO
- *		1) Create navigation terminal function and call to it from the bridge
  * 		2) update cryo terminal depending on whether things fixed or not (used player booleans)
  *		3) elseCatcher(input) - plz god save before doing this
 */
