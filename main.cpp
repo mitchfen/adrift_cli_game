@@ -1,11 +1,11 @@
-/* 
- * 
- * 1) Add readLeaflet() function to every room
+/*
+ *
+ * 1) Add readLeaflet() function to every room? (probably a better way)
  * 2) Come up with method for solving each boolean
  * 3) Better input responses, maybe funny ones
- * 4) playtest playtest playtest
- * 
- * 
+ * 4) Could consolidate player.cpp and player.h
+ *
+ *
 */
 #include "player.cpp"
 #include <iostream>
@@ -17,7 +17,6 @@ using namespace std;
 
 // Function prototypes
 void printwelcome();
-void map();
 string getFileContents(ifstream&);
 void helper();
 void cryo(string input, player& p1);
@@ -97,7 +96,6 @@ int main () {
 }
 
 void printwelcome() {
-
 	// Print text in authorinfo.txt
 	ifstream reed ("authorinfo.txt");
 	string printy = getFileContents(reed);
@@ -105,9 +103,8 @@ void printwelcome() {
 	reed.close ();
 
 	// Feed down and print ASCII art after 5 seconds
-	this_thread::sleep_for(std::chrono::seconds(0));
+	this_thread::sleep_for(std::chrono::seconds(5));
 	cout << "\n\n\n\n\n\n\n\n\n";
-	//cout << "Welcome to.......";
     ifstream Reader ("ascii.txt");
 	string Art = getFileContents(Reader);
 	cout << endl << Art << endl;
@@ -118,16 +115,6 @@ void printwelcome() {
 	string printyplease = getFileContents(ready);
 	cout << endl << printyplease;
 	ready.close ();
-
-}
-
-void map() {
-	
-    ifstream mapRead ("shipart.txt");
-	string map = getFileContents(mapRead);
-	cout << endl << map << endl;
-	mapRead.close ();
-	
 }
 
 string getFileContents (ifstream& File) {
@@ -163,7 +150,7 @@ void idkWhatYouMean(string input) {
 		cout << endl << "I'm not sure which way you want to go." << endl << endl;
 	else
 		cout << endl << "..." << endl << endl;
-	
+
 }
 
 void terminal1() {
@@ -255,7 +242,7 @@ void terminal2(player& p1) {
 }
 
 void inventoryChecker(player& p1) {
-		
+
 		bool goForPrint;
 		// Check if inventory array empty
 		for (int i = 0; i < 10; i++)
@@ -275,7 +262,7 @@ void inventoryChecker(player& p1) {
 }
 
 void cryo(string input, player& p1) {
-	
+
 	//This block makes it so that "You are in..." does not print on game start
 	if (firstTimeCryo )
 		cout << "";
@@ -285,7 +272,7 @@ void cryo(string input, player& p1) {
 	cout << endl;
 	}
 	firstTimeCryo = false;
-	
+
 	while (p1.location == 'C'){
 		getline(cin, input);
 		if (input == "help") {
@@ -306,15 +293,15 @@ void cryo(string input, player& p1) {
 		else if (input == "go left"){
 			p1.location = 'c';
 		}
-		
+
 		else if (input == "inventory"){
 			inventoryChecker(p1);
 		}
 		else {
 			idkWhatYouMean(input);
 		}
-	} 
-} 
+	}
+}
 
 
 
@@ -416,13 +403,13 @@ void galley(string input, player& p1) {
 		}
 		else if (input == "go backward") {
 			p1.location = 'm';
-			
+
 		}
 		else if (input == "take leaflet") {
 			p1.inventory[0] = "leaflet";
 			cout << endl;
 			cout << "Taken.\nYou can read it with \"read leaflet\".";
-			cout << endl;			
+			cout << endl;
 		}
 		else if (input == "go forward") {
 			p1.location = 'b';
@@ -604,7 +591,7 @@ void bridge(string input, player& p1) {
 		}
 		else if (input == "go up") {
 			p1.location = 'o';
-			
+
 		}
 		else if (input == "inventory") {
 			inventoryChecker(p1);
@@ -647,7 +634,7 @@ void observationDeck(string input, player& p1) {
 		else {
 			idkWhatYouMean(input);
 		}
-	} 
+	}
 }
 
 void secondaryReactor(string input, player& p1) {
@@ -695,5 +682,5 @@ void secondaryReactor(string input, player& p1) {
 		else {
 			idkWhatYouMean(input);
 		}
-	} 
+	}
 }
