@@ -7,4 +7,13 @@
 #include <iomanip>
 using namespace std;
 
-player::player() {}
+player::player() {
+	
+		location = 'C';
+		keepGoing = 1;
+		secondaryReactorFixed = 0;
+		hydropaunicsFixed = 0;
+		AIreset = 0;
+		navigationFixed = 0;
+	
+}

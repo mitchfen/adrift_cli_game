@@ -6,23 +6,15 @@
 #include <iomanip>
 using namespace std;
 
-class player {
-	public:
-		
-		//constructor
+struct player {
+	
 		player();
-		
-		//member variables
-		
-		char location = 'C';
+		char location;
 		string inventory[10];
-		bool keepGoing = 1;
-		bool secondaryReactorFixed = 0;
-		bool hydropaunicsFixed = 0;
-		bool AIreset = 0;
-		bool navigationFixed = 0;
-		
-		
-		
+		bool keepGoing;
+		bool secondaryReactorFixed;
+		bool hydropaunicsFixed;
+		bool AIreset;
+		bool navigationFixed;	
 		
 };
