@@ -1,13 +1,13 @@
 /*
  * Tasks required to complete the game:
- * 	Repair secondary reactor (need wrench)
- * 	Replace CO2 filter in hydroponics (need filter)
+ *  Repair secondary reactor (need wrench)
+ *  Replace CO2 filter in hydroponics (need filter)
  *  Reset the AI (need all three fuses)
  *  Correct course on navigation computer in the bridge (requires all other goals be complete)
  *  
  * Inventory array indices:
- * 	0 leaflet (galley)
- * 	1 wrench (observation deck)
+ *  0 leaflet (galley)
+ *  1 wrench (observation deck)
  *  2 15A fuse (Engine room)
  *  3 20A fuse (Storage)
  *  4 50A fuse (Primary reactor)
@@ -15,8 +15,8 @@
  * 
  * 
  * TODO
- * 		2) update cryo terminal depending on whether things fixed or not (used player booleans)
- *		3) elseCatcher(input) - plz god save before doing this
+ * 	2) update cryo terminal depending on whether things fixed or not (used player booleans)
+ *  3) elseCatcher(input) - plz god save before doing this
 */
 #include "player.cpp"
 #include <iostream>
@@ -118,7 +118,7 @@ int main () {
 	cout << endl; 
 	cout << "###########################" << endl;
 	cout << "#                         #" << endl;
-	cout << "#         YOU WIN! 	   #" << endl;
+	cout << "#         YOU WIN!        #" << endl;
 	cout << "#  Thank you for playing  #" << endl;
 	cout << "#                         #" << endl;
 	cout << "###########################" << endl;
@@ -194,7 +194,6 @@ void terminal1() {
 				cout << "\t Terminal unlocked.\n";
 				cout << "\t Would you like to view the ship diagnostics? (y/n)";
 				getline(cin, terminalInput);
-				//cout << endl;
 				if (terminalInput == "y") {
 					cout << endl;
 					cout << "\t\t\t WARNING *** WARNING *** WARNING\n";
@@ -213,7 +212,7 @@ void terminal1() {
 				}
 				else {
 					cout << "\t Invalid input, exiting terminal.\n";
-					cout << endl;				
+					cout << endl;
 				}
 			}
 			else {
