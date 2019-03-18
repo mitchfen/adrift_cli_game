@@ -1,9 +1,9 @@
 /*
  * Tasks required to complete the game:
- *  Repair secondary reactor (need wrench)
- *  Replace CO2 filter in hydroponics (need filter)
- *  Reset the AI (need all three fuses)
- *  Correct course on navigation computer in the bridge (requires all other goals be complete)
+ *  1-Repair secondary reactor (need wrench)
+ *  2-Replace CO2 filter in hydroponics (need filter)
+ *  3-Reset the AI (need all three fuses)
+ *  4-Correct course on navigation computer in the bridge (requires all other goals be complete)
  *  
  * Inventory array indices:
  *  0 leaflet (galley)
@@ -13,10 +13,6 @@
  *  4 50A fuse (Primary reactor)
  *  5 CO2 filter (Storage)
  * 
- * 
- * TODO
- * 	2) update cryo terminal depending on whether things fixed or not (used player booleans)
- *  3) elseCatcher(input) - plz god save before doing this
 */
 #include "player.cpp"
 #include <iostream>
