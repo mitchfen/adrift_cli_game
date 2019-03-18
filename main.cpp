@@ -61,11 +61,17 @@ bool storageFuseTaken = 0;
 bool storageFilterTaken = 0;
 bool engineRoomFuseTaken = 0;
 bool primaryReactorFuseTaken = 0;
+bool leafletTaken = 0;
 
 int main () {
 
 	player p1;
 	printwelcome();
+	cout << endl;
+	cout << "You are standing in the cryo bay.\n";
+	cout << "The door on your left leads to the aft corridor.\n";
+	cout << "There are four cryo pods and a terminal here.\n";
+	cout << endl;
 	while (p1.keepGoing) {
 		switch (p1.location) {
 
@@ -345,7 +351,6 @@ void cryo(string input, player& p1) {
 			cout << "You are standing in the cryo bay.\n";
 			cout << "The door on your left leads to the aft corridor.\n";
 			cout << "There are four cryo pods and a terminal here.\n";
-			//cout << "\n";
 			cout << endl;
 		}
 		else if (input == "activate terminal"){
@@ -468,14 +473,20 @@ void galley(string input, player& p1) {
 			cout << endl;
 			cout << "You are standing in the galley.\n";
 			cout << "The bridge is ahead, the main corridor is behind you.\n";
-			cout << "There are six tables here. One of them has a small leaflet on the seat.\n";
-			cout << endl;
+			if ( leafletTaken == 0 ) {
+				cout << "There are six tables here. One of them has a small leaflet on the seat.\n";
+				cout << endl;
+			}
+			else if ( leafletTaken == 1 ) {
+				cout << endl;
+			}
 		}
 		else if (input == "go back") {
 			p1.location = 'm';
 
 		}
 		else if (input == "take leaflet") {
+			leafletTaken = 1;
 			p1.inventory[0] = "leaflet";
 			cout << endl;
 			cout << "Taken.\nYou can read it with \"read leaflet\".\n";
@@ -788,7 +799,7 @@ void bridge(string input, player& p1) {
 			cout << "You are standing on the ships bridge.\n";
 			cout << "The galley is behind you.\n";
 			cout << "There is a ladder leading up to the observation deck here.\n";
-			cout << "A four crash couches line the front of the room, facing a row of computers.\n";
+			cout << "Four crash couches line the front of the room, facing a row of computers.\n";
 			cout << "There are no windows here. Large monitors show various diagnostic screens and the view outside the ship.\n";
 			cout << "One of the computers has the words \"Navigation Terminal\" embossed on its plastic.\n";
 			cout << endl;
