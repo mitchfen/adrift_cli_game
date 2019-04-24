@@ -1,4 +1,4 @@
 Hello and thank you for playing my game!!
 Details can be found in the Readme.md here:
-www.github.com/Fenmitch/Adrift
-Game will begin in 5 seconds
+www.github.com/mitchfen/Adrift
+Game will begin in 5...
