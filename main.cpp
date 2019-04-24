@@ -4,7 +4,7 @@
  *  2-Replace CO2 filter in hydroponics (need filter)
  *  3-Reset the AI (need all three fuses)
  *  4-Correct course on navigation computer in the bridge (requires all other goals be complete)
- *  
+ *
  * Inventory array indices:
  *  0 leaflet (galley)
  *  1 wrench (observation deck)
@@ -12,7 +12,7 @@
  *  3 20A fuse (Storage)
  *  4 50A fuse (Primary reactor)
  *  5 CO2 filter (Storage)
- * 
+ *
 */
 #include "player.cpp"
 #include <iostream>
@@ -117,7 +117,7 @@ int main () {
 		}
 
 	}
-	cout << endl; 
+	cout << endl;
 	cout << "###########################" << endl;
 	cout << "#                         #" << endl;
 	cout << "#         YOU WIN!        #" << endl;
@@ -277,7 +277,7 @@ void terminal2(player& p1) {
 
 void terminal3(player& p1) {
 	cout << endl << "\t ****** Welcome To Nav-E.Z.******" << endl;
-	
+
 	if (p1.hydropaunicsFixed == 1 && p1.AIreset == 1 && p1.hydropaunicsFixed == 1 && p1.secondaryReactorFixed == 1 ) {
 		cout << "\t Pinging ship systems...\n";
 		cout << "\t All ship systems operational. Nav-E.Z. coming online...\n";
@@ -356,7 +356,7 @@ void cryo(string input, player& p1) {
 		else if (input == "go left"){
 			p1.location = 'c';
 		}
-		
+
 		else if (input == "read leaflet"){
 			leafletReader(p1);
 		}
