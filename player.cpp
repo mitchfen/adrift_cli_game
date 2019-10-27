@@ -7,7 +7,6 @@
 using namespace std;
 
 player::player() {
-		// hi lol
 		location = 'C';
 		keepGoing = 1;
 		secondaryReactorFixed = 0;
