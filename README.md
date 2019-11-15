@@ -1,10 +1,3 @@
-```
-     ___       _______  .______       __   _______ .___________.  
-    /   \     |       \ |   _  \     |  | |   ____||           |  
-   /  ^  \    |  .--.  ||  |_)  |    |  | |  |__   `---|  |----`  
-  /  /_\  \   |  |  |  ||      /     |  | |   __|      |  |       
- /  _____  \  |  '--'  ||  |\  \----.|  | |  |         |  |       
-/__/     \__\ |_______/ | _| `._____||__| |__|         |__|  
-```
- - A short text based puzzle game inspired by Zork  
- - Compile with `make adrift`
+
+ - A short text based puzzle game inspired by Zork
+ - Compile with `make adrift` then ./adrift
