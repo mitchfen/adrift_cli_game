@@ -1,19 +1,3 @@
-/*
- * Tasks required to complete the game:
- *  1-Repair secondary reactor (need wrench)
- *  2-Replace CO2 filter in hydroponics (need filter)
- *  3-Reset the AI (need all three fuses)
- *  4-Correct course on navigation computer in the bridge (requires all other goals be complete)
- *
- * Inventory array indices:
- *  0 leaflet (galley)
- *  1 wrench (observation deck)
- *  2 15A fuse (Engine room)
- *  3 20A fuse (Storage)
- *  4 50A fuse (Primary reactor)
- *  5 CO2 filter (Storage)
- *
-*/
 #include "player.cpp"
 #include <iostream>
 #include <string>
