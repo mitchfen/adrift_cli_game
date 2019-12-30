@@ -118,7 +118,7 @@ void printwelcome() {
 	reed.close ();
 
 	// Feed down and print ASCII art after 5 seconds
-	this_thread::sleep_for(std::chrono::seconds(5));
+	//this_thread::sleep_for(std::chrono::seconds(5));
 	cout << "\n\n\n\n\n\n\n\n\n";
     ifstream Reader ("ascii.txt");
 	string Art = getFileContents(Reader);
