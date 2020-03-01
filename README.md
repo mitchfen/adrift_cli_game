@@ -9,5 +9,5 @@ The success of the mission depends on your ability to fix the ship.
 * **Windows:** Compile with `g++ -o adrift main.cpp` then run `adrift.exe`  
     * Install [mingw](http://www.mingw.org/) and add g++ to your PATH first.
 
-![screenshot](https://github.com/mitchfen/Adrift/blob/master/welcome.png)  
-![screenshot2](https://github.com/mitchfen/adrift/blob/master/actions.png)
+![screenshot](https://github.com/mitchfen/adrift/blob/master/screenshots/welcome.png)  
+![screenshot2](https://github.com/mitchfen/adrift/blob/master/screenshots/actions.png)
