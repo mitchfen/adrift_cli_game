@@ -7,6 +7,7 @@
 using namespace std;
 
 player::player() {
+
 		location = 'C';
 		keepGoing = 1;
 		secondaryReactorFixed = 0;
