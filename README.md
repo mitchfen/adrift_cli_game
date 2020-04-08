@@ -19,8 +19,6 @@ I wrote this during my first year as a CS student to gain familiarity with Githu
    * Compile with `g++ -o adrift .\src\main.cpp`. 
    * Run `.\adrift.exe`  
 
-You can also check the releases tab to get the .exe binary.
-
 ### Screenshots
 
 <img src="https://github.com/mitchfen/adrift/blob/master/screenshots/welcome.png" width = 400 />
