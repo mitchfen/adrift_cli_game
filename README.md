@@ -21,5 +21,4 @@ I wrote this during my first year as a CS student to gain familiarity with Githu
 
 ### Screenshots
 
-<img src="https://github.com/mitchfen/adrift/blob/master/screenshots/welcome.png" width = 400 />
-<img src="https://github.com/mitchfen/adrift/blob/master/screenshots/actions.png" width = 400 />
+<img src="https://github.com/mitchfen/adrift/blob/master/screenshots/actions.png" width = 600 />
