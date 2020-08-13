@@ -1,4 +1,5 @@
 # Adrift
+[![made-with-c++](https://img.shields.io/badge/Made%20with-C%2B%2B-blue.svg)](https://isocpp.org/) [![GitHub license](https://img.shields.io/github/license/mitchfen/Adrift.svg)](https://github.com/mitchfen/Adrift/blob/master/LICENSE) 
 
 ## A short text based puzzle game inspired by Zork.
 
