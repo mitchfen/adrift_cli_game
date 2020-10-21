@@ -1,4 +1,4 @@
-name: C++ CI using make
+name: C++ CI
 
 on:
   push:
@@ -13,9 +13,5 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    - name: make
-      run: make adrift
-    - name: make check
-      run: make check
-    - name: make distcheck
-      run: make distcheck
+    - name: Ensure compilation under g++
+      run: g++ -o adrift .\src\main.cpp
