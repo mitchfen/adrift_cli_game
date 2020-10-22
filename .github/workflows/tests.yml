@@ -7,9 +7,12 @@ on:
     branches: [ master ]
 
 jobs:
-  build:
+  tests:
     runs-on: ubuntu-latest
     steps:
+
     - uses: actions/checkout@v2
     - name: Ensure compilation under g++
       run: g++ -o adrift ./src/main.cpp
+    - name: Test make
+      run: make adrift
