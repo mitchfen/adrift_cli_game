@@ -2,17 +2,17 @@ name: C++ CI
 
 on:
   push:
-    branches: [ master ]
-  pull_request:
-    branches: [ master ]
+    branches: [main]
 
 jobs:
   tests:
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout
+        uses: actions/checkout@v2
 
-    - uses: actions/checkout@v2
-    - name: Ensure compilation under g++
-      run: g++ -o adrift ./src/main.cpp
-    - name: Test make
-      run: make adrift
+      - name: Compile
+        run: g++ -o adrift ./src/main.cpp
+
+      - name: Test makefile
+        run: make adrift

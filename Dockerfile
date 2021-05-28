@@ -1,5 +1,5 @@
-FROM alpine:3.13
-WORKDIR /app
+FROM alpine:latest
+
 COPY . .
-RUN apk add --no-cache gcc musl-dev g++ make && make adrift
+
 CMD ["./adrift"]
