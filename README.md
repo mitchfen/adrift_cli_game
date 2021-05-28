@@ -9,16 +9,11 @@ I wrote this during my first year as a CS student to gain familiarity with GitHu
 
 ![adrift gif](./screenshots/adrift_gif.gif)
 
-### Running the game
+## Run the game:
 
-* Linux:
-   * Install make and g++ using the package manager for your distro.
-   * Clone the repository and cd into it.
-   * Compile with `make adrift` then run with `./adrift`  
-* Windows:
-   * Compile from source:
-      * Install [mingw](http://www.mingw.org/) and add g++ to your PATH.
-      * Clone the repository and cd into it.
-      * Compile with `g++ -o adrift .\src\main.cpp`. 
-      * Run `.\adrift.exe`  
-   * Or just download the [release binary](https://github.com/mitchfen/Adrift/releases/tag/v1.0)
+```bash
+git clone https://github.com/mitchfen/Adrift.git
+cd Adrift
+g++ -o adrift ./src/main.cpp
+./adrift
+```
