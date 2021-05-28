@@ -1,3 +1,4 @@
+[![Publish container](https://github.com/mitchfen/Adrift/actions/workflows/publishContainer.yml/badge.svg?branch=main)](https://github.com/mitchfen/Adrift/actions/workflows/publishContainer.yml)
 # Adrift
 
 ## A text based puzzle game inspired by Zork.
@@ -11,7 +12,7 @@ I wrote this during my first year as a CS student to gain familiarity with GitHu
 
 ## Run the game:
 
-Compile and build:
+Compile:
 
 ```bash
 git clone https://github.com/mitchfen/Adrift.git
@@ -20,7 +21,7 @@ g++ -o adrift ./src/main.cpp
 ./adrift
 ```
 
-Pull the <10mb Docker image:
+Or pull and run the 10mb Docker image:
 
 ```bash
 docker run -it --rm ghcr.io/mitchfen/adrift:latest
