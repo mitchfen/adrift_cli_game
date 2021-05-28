@@ -15,7 +15,7 @@ void terminal1();
 void terminal2(player& p1);
 void terminal3(player& p1);
 void inventoryChecker(player& p1);
-void idkWhatYouMean(string input);
+void invalidCommand(string input);
 void leafletReader(player& p1);
 
 // Room function prototypes
@@ -32,9 +32,6 @@ void bridge(string input, player& p1);
 void observationDeck(string input, player& p1);
 void secondaryReactor(string input, player& p1);
 
-
-
-
 // Global variables
 string input = "";
 bool firstTimeCryo = true;
@@ -45,7 +42,6 @@ bool primaryReactorFuseTaken = 0;
 bool leafletTaken = 0;
 
 int main () {
-
 	player p1;
 	printwelcome();
 	cout << endl;
@@ -55,7 +51,6 @@ int main () {
 	cout << endl;
 	while (p1.keepGoing) {
 		switch (p1.location) {
-
 			// Cryo
 			case 'C':
 				cryo(input, p1);
@@ -99,6 +94,9 @@ int main () {
 			// switch to blank room to trigger win
 			case 'w':
 				break;
+            // q to quit
+			case 'q':
+				return 0;
 		}
 
 	}
@@ -156,10 +154,11 @@ void helper() {
 		cout << "You can type:\n";
 		cout << "go... up, left, right, down, forward, back.\n";
 		cout << "take, look, activate terminal, inventory.\n";
+        cout << "q to quit'\n";
 		cout << endl;
 }
 
-void idkWhatYouMean(string input) {
+void invalidCommand(string input) {
 	if (input == "")
 		cout << endl << "..." << endl << endl;
 	else if (input.find("go") < 1000)
@@ -349,8 +348,12 @@ void cryo(string input, player& p1) {
 		else if (input == "inventory"){
 			inventoryChecker(p1);
 		}
+		else if (input == "q"){
+			p1.location = 'q';
+			cout << "Bye!\n";
+		}
 		else {
-			idkWhatYouMean(input);
+			invalidCommand(input);
 		}
 	}
 }
@@ -391,8 +394,12 @@ void mainCorridor(string input, player& p1) {
 		else if (input == "inventory") {
 			inventoryChecker(p1);
 		}
+        else if (input == "q"){
+			p1.location = 'q';
+			cout << "Bye!\n";
+		}
 		else {
-			idkWhatYouMean(input);
+			invalidCommand(input);
 		}
 	}
 
@@ -434,8 +441,12 @@ void corridor(string input, player& p1) {
 		else if (input == "inventory") {
 			inventoryChecker(p1);
 		}
+        else if (input == "q"){
+			p1.location = 'q';
+			cout << "Bye!\n";
+		}
 		else {
-			idkWhatYouMean(input);
+			invalidCommand(input);
 		}
 	}
 
@@ -482,12 +493,14 @@ void galley(string input, player& p1) {
 		else if (input == "inventory") {
 			inventoryChecker(p1);
 		}
+        else if (input == "q"){
+			p1.location = 'q';
+			cout << "Bye!\n";
+		}
 		else {
-			idkWhatYouMean(input);
+			invalidCommand(input);
 		}
 	}
-
-
 }
 
 void engineRoom(string input, player& p1) {
@@ -530,8 +543,12 @@ void engineRoom(string input, player& p1) {
 		else if (input == "inventory") {
 			inventoryChecker(p1);
 		}
+        else if (input == "q"){
+			p1.location = 'q';
+			cout << "Bye!\n";
+		}
 		else {
-			idkWhatYouMean(input);
+			invalidCommand(input);
 		}
 	}
 }
@@ -584,8 +601,12 @@ void hydroponics(string input, player& p1) {
 		else if (input == "inventory") {
 			inventoryChecker(p1);
 		}
+        else if (input == "q"){
+			p1.location = 'q';
+			cout << "Bye!\n";
+		}
 		else {
-			idkWhatYouMean(input);
+			invalidCommand(input);
 		}
 	} // end while
 }
@@ -638,8 +659,12 @@ void AIcore(string input, player& p1) {
 		else if (input == "inventory") {
 			inventoryChecker(p1);
 		}
+        else if (input == "q"){
+			p1.location = 'q';
+			cout << "Bye!\n";
+		}
 		else {
-			idkWhatYouMean(input);
+			invalidCommand(input);
 		}
 	} // end while
 }
@@ -714,8 +739,12 @@ void storage(string input, player& p1) {
 		else if (input == "inventory") {
 			inventoryChecker(p1);
 		}
+        else if (input == "q"){
+			p1.location = 'q';
+			cout << "Bye!\n";
+		}
 		else {
-			idkWhatYouMean(input);
+			invalidCommand(input);
 		}
 	}
 }
@@ -760,8 +789,12 @@ void primaryReactor(string input, player& p1) {
 		else if (input == "inventory") {
 			inventoryChecker(p1);
 		}
+        else if (input == "q"){
+			p1.location = 'q';
+			cout << "Bye!\n";
+		}
 		else {
-			idkWhatYouMean(input);
+			invalidCommand(input);
 		}
 	} // end while
 }
@@ -801,8 +834,12 @@ void bridge(string input, player& p1) {
 		else if (input == "inventory") {
 			inventoryChecker(p1);
 		}
+        else if (input == "q"){
+			p1.location = 'q';
+			cout << "Bye!\n";
+		}
 		else {
-			idkWhatYouMean(input);
+			invalidCommand(input);
 		}
 		// else if (input == "activate terminal" || "activate navigation terminal")
 	}
@@ -849,8 +886,12 @@ void observationDeck(string input, player& p1) {
 			p1.inventory[1] = "wrench";
 			cout << endl << "Taken.\n" << endl;
 		}
+        else if (input == "q"){
+			p1.location = 'q';
+			cout << "Bye!\n";
+		}
 		else {
-			idkWhatYouMean(input);
+			invalidCommand(input);
 		}
 	}
 }
@@ -900,8 +941,12 @@ void secondaryReactor(string input, player& p1) {
 			else if (p1.inventory[1] != "wrench")
 				cout << endl << "You try to turn the crank with your hands but aren't strong enough. Maybe with some leverage?\n" << endl;
 		}
+        else if (input == "q"){
+			p1.location = 'q';
+			cout << "Bye!\n";
+		}
 		else {
-			idkWhatYouMean(input);
+			invalidCommand(input);
 		}
 	}
 }
