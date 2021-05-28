@@ -11,9 +11,19 @@ I wrote this during my first year as a CS student to gain familiarity with GitHu
 
 ## Run the game:
 
+Compile and build:
+
 ```bash
 git clone https://github.com/mitchfen/Adrift.git
 cd Adrift
 g++ -o adrift ./src/main.cpp
 ./adrift
 ```
+
+Pull the <10mb Docker image:
+
+```bash
+docker run -it --rm ghcr.io/mitchfen/adrift:latest
+```
+
+Or download the [Windows release](https://github.com/mitchfen/Adrift/releases/tag/v1.0).
