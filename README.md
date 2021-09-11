@@ -1,4 +1,4 @@
-![header](https://capsule-render.vercel.app/api?type=waving&color=f34b7d&height=130&section=header&text=Adrift%20-%20a%20text%20adventure%20game&fontSize=30&rotate=+0&fontAlign=30&fontAlignY=34)
+# Adrift - a text adventure game
 
 [![Publish container](https://github.com/mitchfen/Adrift/actions/workflows/publishContainer.yml/badge.svg)](https://github.com/mitchfen/Adrift/actions/workflows/publishContainer.yml)
 
