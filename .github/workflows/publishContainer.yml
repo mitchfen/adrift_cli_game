@@ -17,8 +17,8 @@ jobs:
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Compile Adrift for alpine Linux
-        run: g++ -o adrift -static ./src/main.cpp
+      - name: Compile
+        run: g++ -o adrift ./src/main.cpp -static
 
       - name: Build and push Docker image
         uses: docker/build-push-action@v2

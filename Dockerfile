@@ -1,5 +1,4 @@
-FROM alpine:latest
-
-COPY . .
-
+FROM scratch
+COPY adrift /
+COPY *.txt /
 CMD ["./adrift"]
