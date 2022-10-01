@@ -1,4 +1,3 @@
 FROM scratch
-COPY adrift /
-COPY *.txt /
+COPY adrift *.txt /
 CMD ["./adrift"]
